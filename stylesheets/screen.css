@@ -1,0 +1,20 @@
+#page {
+    width: 960px;
+    height: 620px;
+    margin: 0 auto;
+    border: 1px solid red;
+}
+
+#nav {
+    width: 200px;
+    height: 620px;
+    border: 1px solid green;
+}
+
+.tab {
+    height: 124px;
+    border: 1px solid blue;
+    border-right: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
