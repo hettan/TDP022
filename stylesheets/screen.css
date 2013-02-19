@@ -54,9 +54,9 @@
 .tab {
     height: 124px;
     border-right: 1px solid #aaaaaa;
-	text-align: center;
-	background-color: #fafafa;
-	cursor: pointer;
+    text-align: center;
+    background-color: #fafafa;
+    cursor: pointer;
 }
 
 .tab.active {
@@ -146,4 +146,92 @@
 	height: 0px;
 	width: 0px;
 	display: block;
+}
+
+.noti_bar {
+    border-style: solid;
+    border-width: 2px 0px 2px 0px;
+    border-color: #eeeeee;
+    margin-top: 20px;
+    padding: 8px;
+    font-size: 18px;
+}
+
+.noti_filter {
+    float: right;
+    font-size: 16px;
+}
+
+.noti_filter select {
+    margin: 0;
+}
+
+.select_filter {
+    width:auto;
+    height:auto;
+    font-size:14px;
+    padding:0px;
+}
+
+.main_content {
+    margin: 20px;
+}
+
+.noti_checkbox {
+    -ms-transform: scale(2); /* IE */
+    -moz-transform: scale(2); /* FF */
+    -webkit-transform: scale(2); /* Safari and Chrome */
+    -o-transform: scale(2); /* Opera */
+}
+
+.noti_item {
+    margin-top:40px;
+}
+
+.noti_text {
+    margin-left:10px;
+}
+
+.login_info {
+    margin:15px;
+    font-size:14px;
+}
+
+.login {
+    margin-left:15px;
+    margin-top:100px;
+}
+
+.register {
+    margin-left:15px;
+    margin-top:50px;
+}
+
+.local_weather {
+    margin-top:50px;
+    margin-left:15px;
+}
+
+.infobox {
+    height: 100px;
+    width: 100px;
+    border: 2px solid #aaaaaa;
+    margin:20px;
+    font-size:30px;
+    text-align:center;
+    line-height: 100px;
+    float:left;
+}
+
+.weather_map {
+    margin-top:30px;
+    margin-left:50px;
+}
+
+.search_friend {
+    border: 2px solid #aaaaaa;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    padding-top:5px;
+    padding-bottom:5px;
 }
