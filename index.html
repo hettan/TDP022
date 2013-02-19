@@ -17,37 +17,121 @@
     <div id="page">
       <div id="nav">
         <div class="tab">
-          <img src="icons/home.png" /><br />
+          <img src="resources/images/hem_ikon.png" /><br />
           Hem
         </div>
 
         <div class="tab active">
-          <img src="icons/travel.png" /><br />
+          <img src="resources/images/plan_v1_ikon.png" /><br />
           Reseplanerare
         </div>
     
         <div class="tab">
-          <img src="icons/travel.png" /><br />
+          <img src="resources/images/sms_ikon.png" /><br />
           Notifikationer
         </div>
 
         <div class="tab">
-          <img src="icons/travel.png" /><br />
+          <img src="resources/images/friends_ikon.png" /><br />
           Vänner
         </div>
 
         <div class="tab">
-          <img src="icons/travel.png" /><br />
+          <img src="resources/images/settings_ikon.png" /><br />
           Inställningar
         </div>
       </div>
 
       <div id="main">
-        <div id="main_home">Hem.</div>
-        <div id="main_planner">Reseplanerare.</div>
-        <div id="main_notifications">Notifikationer.</div>
+		<!-- ==================== <HOME> ==================== -->
+		<div id="main_home">
+		
+		</div>
+		<!-- ==================== </HOME> ==================== -->
+
+		<!-- ==================== <RESEPLANERARE> ==================== -->
+		<div id="main_planner">
+			<div id="s_frame">
+				<form action="">
+					Sökord: <input type="text" name="search_field"> Resmål: <input type="checkbox" name="tr_place" value="tr_place"> Aktivitet: <input type="checkbox" name="tr_act" value="tr_act">
+					<br><br>
+					Välj önskat väder: 
+					<br />
+					<input type="checkbox" name="i_sun" value="i_sun"><img src="resources/images/ikon_solsken.png" width="70" align="center">
+					<input type="checkbox" name="i_half" value="i_half"><img src="resources/images/ikon_halvklart.png" width="70" align="center">
+					<input type="checkbox" name="i_cloud" value="i_cloud"><img src="resources/images/ikon_molnigt.png" width="70" align="center">
+					<input type="checkbox" name="i_rain" value="i_rain"><img src="resources/images/ikon_regn.png" width="70" align="center">
+					<input type="checkbox" name="i_snow" value="i_snow"><img src="resources/images/ikon_sno.png" width="70" align="center">
+					<br><br>
+					Välj land: 
+					<select name="countries">
+						<option value="sweden" selected>Sverige</option>
+						<option value="norway">Norge</option>
+						<option value="finland">Finland</option>
+						<option value="denmark">Danmark</option>
+						<option value="malta">Malta</option>
+					</select>
+					<br /><br />
+					<input class="btn btn-primary" type="submit" value="Sök" />
+					<hr>
+					Resultat:
+					<br><hr>
+					<div id="result_box">
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- ==================== </RESEPLANERARE> ==================== -->
+		<div id="main_notifications"></div>
         <div id="main_friends">Vänner.</div>
-        <div id="main_preferences">Inställningar.</div>
+		<div id="main_preferences">
+			<div id="settings_frame">
+				<hr /> 
+				Profil<br>
+				<hr />
+				<br>
+				<div id="pr_box">
+					<div id="pr_text">
+						Förnamn: <br>
+						Efternamn: <br>
+						Mobiltelefonnr: <br>
+						E-post: <br>
+					</div>
+					<div id="pr_fields">
+						<input type="text" name="first_name" placeholder="Nisse"> Dölj:<input type="checkbox" name="hide_n" value="hide_n"><br>
+						<input type="text" name="last_name" placeholder="Hult"> Dölj:<input type="checkbox" name="hide_l" value="hide_l"><br>
+						<input type="text" name="cell_nr" placeholder="0708-459 630"> Dölj:<input type="checkbox" name="hide_c" value="hide_c" checked="checked"><br>
+						<input type="text" name="e_mail" placeholder="nisse.h@gmail.com"> Dölj:<input type="checkbox" name="hide_e" value="hide_e"  checked="checked"><br>
+					</div>
+				</div>
+				<br><br>
+				<hr> Konto <br><hr>
+				<br>
+				Visa bevakningar för 
+				<select name="watch_time">
+					<option value="onew">1 vecka framåt</option>
+					<option value="onem">1 månad framåt</option>
+					<option value="threem">3 månader framåt</option>
+					<option value="oney">1 år framåt</option>
+					<option value="all" selected>all framtid</option>
+				</select>
+				<br><br>
+				<hr> Delning och säkerhet <br><hr>
+				<br><br>
+				Dela mina uppdateringar på 
+				<input type="checkbox" name="f_b" value="f_b"> Facebook
+				<input type="checkbox" name="twit" value="twit"> Twitter
+				<input type="checkbox" name="tmb" value="tmb"> Tumblr
+				<input type="checkbox" name="linkd" value="linkd"> Linkedin
+				<br><br>
+				Visa bevakningar 
+				<select name="watch_show">
+					<option value="all_w">alla</option>
+					<option value="logged_w" selected>endast inloggade</option>
+					<option value="friends_w">endast vänner</option>
+				</select>
+			</div>
+			</div>
       </div>
 
       <div id="alerts">

@@ -24,6 +24,7 @@
 	height: 580px;
 	float: left;
 	padding: 10px;
+    overflow: scroll;
 }
 
 #main > div {
