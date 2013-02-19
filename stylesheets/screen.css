@@ -5,7 +5,7 @@
 
 #page {
     width: 960px;
-    height: 620px;
+    height: 622px;
     margin: 0 auto;
 	border: 2px solid #aaaaaa;
 	padding: 0px 0px;
@@ -26,29 +26,52 @@
 	padding: 10px;
 }
 
+#main > div {
+	display: none;
+}
+
+#main > div.active {
+	display: block;
+}
+
 #alerts {
 	width: 200px;
 	height: 620px;
 	float: right;
 	border-left: 1px solid #aaaaaa;
+	overflow: hide;
 }
 
 #alerts > h4 {
 	text-align: center;
 }
 
+.placeholder {
+	display: none;
+}
+
 .tab {
     height: 124px;
     border-right: 1px solid #aaaaaa;
     text-align: center;
+    background-color: #fafafa;
+    cursor: pointer;
 }
 
 .tab.active {
 	border: 1px solid #aaaaaa;
 	border-right: 0;
-	border-top-left-radius: 10px;
-	border-bottom-left-radius: 10px;
+	border-left: 0;
 	font-weight: bold;
+	background-color: #ffffff;
+}
+
+.tab:first-child.active {
+	border-top: 0;
+}
+
+.tab:last-child.active {
+	border-bottom: 0;
 }
 
 .tab > img {
@@ -61,9 +84,12 @@
 
 .place_alert {
 	width: 200px;
+	height: 50px;
 	padding-top: 10px;
+	padding-bottom: 10px;
 	border-bottom: 1px solid #aaaaaa;
 	position: relative;
+	overflow: hidden;
 }
 
 .place_alert > img {
@@ -79,12 +105,20 @@
 	font-weight: bold;
 }
 
+.place_alert .info {
+	padding: 0px 10px;
+	font-size: 11px;
+}
+
 .place_alert .fold {
 	height: 10px;
 	border-top: 1px solid #aaaaaa;
 	background-color: #eeeeee;
 	text-align: center;
 	cursor: pointer;
+	position: absolute;
+	bottom: 0;
+	width: 200px;
 }
 
 .place_alert .fold:hover {
