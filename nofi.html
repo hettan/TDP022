@@ -1,0 +1,102 @@
+<html>
+  <head>
+    <title>Weatherpal</title>
+
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/screen.css" />
+    
+    <script type="text/javascript" src="javascript/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascript/weatherpal.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <h1>Weatherpal</h1>
+    </div>
+
+    <div id="page">
+      <div id="nav">
+        <div class="tab">
+          <img src="icons/home.png" /><br />
+          Hem
+        </div>
+
+        <div class="tab active">
+          <img src="icons/travel.png" /><br />
+          Reseplanerare
+        </div>
+    
+    <div class="tab">
+      <img src="icons/travel.png" /><br />
+      Notifikationer
+    </div>
+
+    <div class="tab">
+      <img src="icons/travel.png" /><br />
+      Vänner
+    </div>
+
+    <div class="tab">
+      <img src="icons/travel.png" /><br />
+      Inställningar
+    </div>
+      </div>
+
+      <div id="main">
+        <h2><u>Notifieringar</u></h2>
+
+        <div class="noti_bar">
+          Bevakningar
+             <div class="noti_filter">
+               Filter:
+               <select class="select_filter">
+                 <option>Alla</option>
+                 <option>Bevakade</option>
+                 <option>Obevakade</option>
+               </select>
+            </div>
+        </div>
+        
+        <div class="main_content">
+          <div class="noti_item">
+            <input class="noti_checkbox" type="checkbox"/> <span class="noti_text">Resan till Bahamas</span></div>
+          <div class="noti_item">
+            <input class="noti_checkbox" type="checkbox" /> <span class="noti_text">Hemma i Lingonviken</span></div>
+          <div class="noti_item">
+            <input class="noti_checkbox" type="checkbox" /> <span class="noti_text">Sommarstugan i Barcelona</span></div>
+        </div>
+      </div>
+
+      <div id="alerts">
+        <h4>Bevakningar</h4>
+
+        <div class="place_alert">
+          <button type="button" class="close">&times;</button>
+          <img title="Linköping" />
+          <p>
+            <span class="placename">Linköping</span><br />
+            18&deg;C
+          </p>
+
+          <div class="fold">
+              <div class="caret"></div>
+          </div>
+        </div>
+        
+        <div class="place_alert">
+          <button type="button" class="close">&times;</button>
+          
+          <img title="Barcelona" />
+          <p>
+            <span class="placename">Barcelona</span><br />
+            26&deg;C
+          </p>
+          
+          <div class="fold">
+            <div class="caret"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
