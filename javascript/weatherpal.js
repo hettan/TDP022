@@ -32,7 +32,7 @@ $(document).ready(function() {
 		localStorage[PREFIX + "place_alerts"] = JSON.stringify([{
 			name: "Linköping",
 			temperature: -1,
-			info: "Hej"
+			info: "Min: -6&deg;C<br />Max: 2&deg;C"
 		}]);
 	}
 	
@@ -62,11 +62,92 @@ $(document).ready(function() {
 	$(".tab").on("click", function() {
 		var index = $(".tab").index($(this));
 		select_tab(index);
+		$("#settings_alert").hide();
 	});
+	
+	$("#save_settings").on("click", function() {
+		save_settings();
+	});
+	
+	$("#planner_search").submit(function() {
+		var search_string = $("#planner_search > input[name=search_field]").val();
+		if(search_string.length == 0) {
+			$("#result_box").hide();
+			return false;
+		}
+
+		if("malta".indexOf(search_string.toLowerCase()) > -1) {
+			$("#result_box").show();
+		} else {
+			$("#result_box").hide();
+		}
+		
+		return false;
+	});
+	
+	$("#result_box > button").on("click", function() {
+		var place_alert = {
+			name: "Malta",
+			temperature: 23,
+			info: "Min: 12&deg;C<br />Max: 28&deg;C"
+		};
+		
+		add_alert_element(place_alert, true);
+
+		var alerts = JSON.parse(localStorage[PREFIX + "place_alerts"]);
+		alerts.push(place_alert);
+		localStorage[PREFIX + "place_alerts"] = JSON.stringify(alerts);
+	});
+	
+	$("#friend_search").submit(function() {
+		var search_string = $("#friend_search > input[type=text]").val();
+		if("anne holt".indexOf(search_string.toLowerCase()) > -1) {
+			$("#search_results").show();
+		} else {
+			$("#search_results").hide();
+		}
+
+		return false;
+	});
+	
+	$("#search_results button").on("click", function() {
+		$(this).hide();
+	});
+	
+	load_settings();
 });
 
 function remove_alert(index) {
 	place_alerts = JSON.parse(localStorage[PREFIX + "place_alerts"]);
 	place_alerts.pop(index);
 	localStorage[PREFIX + "place_alerts"] = JSON.stringify(place_alerts);
+}
+
+function save_settings() {
+	$("#settings_alert").show();
+	$("#pr_box > input[type=text]").each(function(index, elm) {
+		localStorage[PREFIX + $(elm).attr("name")] = $(elm).val();
+	});
+	
+	$("#share_settings > input[type=checkbox]").each(function(index, elm) {
+		elm = $(elm);
+		localStorage[PREFIX + elm.attr("name")] = elm.prop('checked');
+	});
+
+	localStorage[PREFIX + "watch_show"] = $("select[name=watch_show]").val();
+	localStorage[PREFIX + "watch_time"] = $("select[name=watch_time]").val();
+}
+
+function load_settings() {
+	$("#pr_box > input[type=text]").each(function(index, elm) {
+		$(elm).val(localStorage[PREFIX + $(elm).attr("name")]);
+	});
+	
+	$("#share_settings > input[type=checkbox]").each(function(index, elm) {
+		elm = $(elm);
+		elm.prop('checked', localStorage[PREFIX + elm.attr("name")] == 'true');
+	});
+	
+	$("select[name=watch_show]").val(localStorage[PREFIX + "watch_show"]);
+	$("select[name=watch_time]").val(localStorage[PREFIX + "watch_time"]);
 }

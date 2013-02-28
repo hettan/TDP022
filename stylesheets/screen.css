@@ -1,6 +1,13 @@
 #header {
 	margin: 0 auto;
 	text-align: center;
+	padding: 0px;
+}
+
+#header img {
+	height: 150px;
+	padding: 0;
+	margin-bottom: -10px;
 }
 
 #page {
@@ -76,9 +83,7 @@
 }
 
 .tab > img {
-	width: 140px;
 	height: 80px;
-	background-color: #ebebeb;
 	margin-top: 15px;
 	margin-bottom: 5px;
 }
@@ -234,4 +239,44 @@
     border-right-color: transparent;
     padding-top:5px;
     padding-bottom:5px;
+}
+
+/* PREFERENCES */
+#pr_box {
+	width: 320px;
+}
+
+#settings_alert {
+	display: none;
+}
+
+#result_box {
+	display: none;
+}
+
+.box {
+	background-color: #eaeaea;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+#search_results > .box > button {
+	margin-top: -5px;
+}
+
+#search_results {
+	display: none;
+}
+
+.box > button {
+	float: right;
+}
+
+#result_box > button {
+	margin-top: 30px;
+}
+
+.search_result_title {
+	font-size: 16px;
+	font-weight: bold;
 }
